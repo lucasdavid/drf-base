@@ -1,0 +1,8 @@
+django
+django-widget-tweaks
+djangorestframework
+drf-extensions
+django-filter
+markdown
+djangorestframework-bulk
+django-oauth-toolkit
