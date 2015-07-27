@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load url from future %}
+{% block content %}
+<h1>{{ application.name }}</h1>
+
+<div class="table-responsive">
+    <table class="table table-hover table-striped">
+        <tr>
+            <td><strong>Id</strong></td>
+            <td>{{ application.id }}</td>
+        </tr>
+        <tr>
+            <td><strong>{% trans "Client ID" %}</strong></td>
+            <td>{{ application.client_id }}</td>
+        </tr>
+        <tr>
+            <td><strong>{% trans "Client secret" %}</strong></td>
+            <td>{{ application.client_secret }}</td>
+        </tr>
+        <tr>
+            <td><strong>{% trans "Type" %}</strong></td>
+            <td>{{ application.client_type }}</td>
+        </tr>
+        <tr>
+            <td><strong>{% trans "Authorization Grant Type" %}</strong></td>
+            <td>{{ application.authorization_grant_type }}</td>
+        </tr>
+        <tr>
+            <td><strong>{% trans "Allowed redirect URIs" %}</strong></td>
+            <td>
+                <pre>{{ application.redirect_uris }}</pre>
+            </td>
+        </tr>
+    </table>
+</div>
+<br />
+
+<div class="text-right">
+    <a class="btn btn-default" href="{% url 'oauth2_provider:list' %}">{% trans "Go Back" %}</a>
+    <a class="btn btn-default" href="{% url 'oauth2_provider:update' application.id %}">
+        <span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;
+        {% trans "Edit" %}</a>
+    <a class="btn btn-danger" href="{% url 'oauth2_provider:delete' application.id %}">
+        <span class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;
+        {% trans "Delete" %}</a>
+</div>
+{% endblock content %}
