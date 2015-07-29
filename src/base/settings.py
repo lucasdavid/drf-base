@@ -83,6 +83,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = ('E:/Repositories/drfbase/src/static/',)
+
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static/'),)
 
 LOGIN_REDIRECT_URL = '/'
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination'
+}
