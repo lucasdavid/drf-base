@@ -1,0 +1,36 @@
+.resource-description, .response-info {
+  margin-bottom: 2em;
+}
+
+.format-option {
+  font-family: Menlo, Consolas, "Andale Mono", "Lucida Console", monospace;
+}
+
+.button-form {
+  float: right;
+  margin-right: .5em;
+}
+
+.disabled-tooltip-shield {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.errorlist {
+  margin-top: 0.5em;
+}
+
+pre {
+  overflow: auto;
+  word-wrap: normal;
+  white-space: pre;
+  font-size: 12px;
+}
+
+.page-header {
+  border-bottom: none;
+  padding-bottom: 0px;
+}
