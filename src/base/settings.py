@@ -89,6 +89,12 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static/'),)
 LOGIN_REDIRECT_URL = '/'
 
 
+# Rest Framework
+
 REST_FRAMEWORK = {
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination'
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'DEFAULT_FILTER_BACKENDS': (
+        'rest_framework.filters.DjangoFilterBackend',
+        'rest_framework.filters.OrderingFilter',
+    ),
 }

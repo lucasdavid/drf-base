@@ -1,11 +1,16 @@
 {% extends "base.html" %}
 
+{% block content_class %}container-fluid{% endblock %}
 {% block content %}
+<div class="jumbotron">
+    <h1>Hello!</h1>
 
-<h1>Hello!</h1>
-<p>
-    How are you?
-    <button class="btn btn-primary">Click me!</button>
-</p>
-
+    <p>
+        How are you doing? :-)
+    </p>
+    <p class="text-right">
+        <button class="btn btn-lg btn-success">Explore</button>
+        <button class="btn btn-lg btn-primary">Go to the docs</button>
+    </p>
+</div>
 {% endblock %}
