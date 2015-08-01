@@ -23,7 +23,6 @@ INSTALLED_APPS = (
     'rest_framework',
     'oauth2_provider',
     'authority',
-    'simple',
     'home',
 )
 
@@ -114,7 +113,7 @@ REST_FRAMEWORK = {
 
 OAUTH2_PROVIDER = {
     'SCOPES': {
-        'read': 'Permits the application to read information.',
-        'write': 'Permits the application to modify information.',
+        'read': 'The application is requesting permission to read information.',
+        'write': 'The application is requesting permission to write data.',
     }
 }

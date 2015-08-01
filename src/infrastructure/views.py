@@ -8,10 +8,16 @@ from . import permissions
 
 
 class GuardedModelViewSet(mixins.NestedViewSetMixin, BulkModelViewSet):
-    permission_classes = (rf_permissions.DjangoModelPermissions, TokenHasReadWriteScope,)
+    permission_classes = (
+        # TokenHasReadWriteScope,
+        rf_permissions.DjangoModelPermissions,
+    )
     filter_backends = (filters.DjangoFilterBackend,)
 
 
 class IndividuallyGuardedModelViewSet(GuardedModelViewSet):
-    permission_classes = (permissions.FullObjectPermissions, TokenHasReadWriteScope,)
+    permission_classes = (
+        # TokenHasReadWriteScope,
+        permissions.FullObjectPermissions,
+    )
     filter_backends = (filters.DjangoFilterBackend, filters.DjangoObjectPermissionsFilter,)
