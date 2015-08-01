@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}DFR-Base docs{% endblock %}
+{% block content_class %}container-fluid{% endblock %}
+{% block content %}
+<h1>Documentation</h1>
+<h2>
+    Introduction
+    <small>A small description over what this project is about.</small>
+</h2>
+<p>
+    This project represents a base for sub-sequential projects, implementing many interesting features, such as
+    oauth-2 token authentication, bullk operations, resources selection and projection based on URI parameters
+    and many others.
+</p>
+<h2>
+    Applications available
+    <small>Check out all applications currently available through this API.</small>
+</h2>
+<div class="table-responsive">
+    <table class="table table-hover table-striped">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>URI</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>Authority</td>
+            <td>Creation and management of users, groups and permissions.</td>
+            <td><a href="/api/authority">/api/authority</a></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Simple</td>
+            <td>Management of events.</td>
+            <td><a href="/api/simple">/api/simple</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}

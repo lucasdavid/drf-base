@@ -3,14 +3,18 @@
 {% block content_class %}container-fluid{% endblock %}
 {% block content %}
 <div class="jumbotron">
+    {% if user.is_authenticated %}
+    <h1>Hello, {{ user.username }}!</h1>
+    {% else %}
     <h1>Hello!</h1>
+    {% endif %}
 
     <p>
         How are you doing? :-)
     </p>
     <p class="text-right">
-        <button class="btn btn-lg btn-success">Explore</button>
-        <button class="btn btn-lg btn-primary">Go to the docs</button>
+        <a href="/accounts/login" class="btn btn-lg btn-success">Sign in</a>
+        <a href="/docs" class="btn btn-lg btn-primary">Explore the docs</a>
     </p>
 </div>
 {% endblock %}

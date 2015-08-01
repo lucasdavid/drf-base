@@ -5,7 +5,15 @@ from rest_framework import views
 
 class HomeView(views.View):
     def get(self, request):
-        template = loader.get_template('index.html')
-        context = RequestContext(request)
+        return HttpResponse(
+            loader
+                .get_template('index.html')
+                .render(RequestContext(request)))
 
-        return HttpResponse(template.render(context))
+
+class DocsView(views.View):
+    def get(self, request):
+        return HttpResponse(
+            loader
+                .get_template('docs.html')
+                .render(RequestContext(request)))

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<div class="empty-space"></div>
+<h1>
+    Bye!
+    <small>Come back soon!</small>
+</h1>
+<p>
+    You have been logged out. What do you want to do now?
+</p>
+<p class="">
+    <a href="/" class="btn btn-default">Go back to Home</a>
+    <a href="/accounts/login" class="btn btn-success">Sign in again...</a>
+</p>
+{% endblock %}
